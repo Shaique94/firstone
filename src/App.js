@@ -6,7 +6,7 @@ const WeatherApp = () => {
 
   let handleSearch=(event)=>{
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={your_api_id}&units=metric`)
-    .then((response) => response.json())
+    .then((response) => response.json()) 
     .then((finalresponse)=>{
       console.log(finalresponse)
       setTemperature(finalresponse.main.temp)
